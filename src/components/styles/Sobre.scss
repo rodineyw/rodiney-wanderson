@@ -1,0 +1,40 @@
+.sobre {
+ margin: 0 auto;
+
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+}
+
+@media (min-width: 768px) {
+ .sobre {
+   margin: 0;
+   padding: 1rem;
+ }
+}
+
+.sobre h1 {
+ font-weight: bold;
+ font-size: 3rem;
+ margin-bottom: 2.5rem;
+
+ color: var(--color-primary);
+}
+
+.sobre span {
+  font-weight: bold;
+  font-size: 3rem;
+
+  color: transparent;
+  
+  background-image: linear-gradient(to right, #ab0cd3, #18c59a);
+  background-clip: text;
+}
+
+.sobre p {
+  color: var(--color-secundary);
+  font-weight: 100;
+  font-size: 1.5rem;
+
+  margin-bottom: 1rem;
+}

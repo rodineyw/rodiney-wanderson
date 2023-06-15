@@ -1,0 +1,87 @@
+.card-repo {
+  width: 20rem;
+  margin: 0 auto;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-projeto {
+  color: var(--color-primary);
+  font-weight: 100;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.repo {
+  font-size: 1.3rem;
+}
+
+.bg {
+  background-color: var(--color-dark);
+  border-radius: 1rem;
+  margin-bottom: .5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 10rem;
+}
+
+
+.bg a {
+  color: var(--bg-color-secundary);
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container-card {
+    width: 40rem;
+    margin: 0 auto;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    grid-gap: 1rem;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: fit-content;
+    grid-template-areas:
+    "board1 board2"
+    "board3 board4";
+  }
+
+  .bg {
+    background-color: var(--color-dark);
+    cursor: pointer;
+
+    height: 15rem;
+    border-radius: 1rem;
+    opacity: 0.5;
+
+    margin: 0;
+
+    transition: 500ms;
+  }
+
+  .bg:hover {
+    opacity: 1;
+    transition: 500ms ease-in-out;
+    -webkit-transition: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    drop
+  }
+
+  .bg a {
+    font-size: 3rem;
+  }
+
+  .repo {
+    font-size: 1.5rem;
+  }
+}

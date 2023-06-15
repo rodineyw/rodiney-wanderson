@@ -1,0 +1,152 @@
+:root {
+  --color-primary: #f1f1f1;
+  --color-secundary: #6b6b6b;
+
+  --color-dark: #1a1a1a;
+
+  --bg-color-primary: #121212;
+  --bg-color-secundary: #747f8f;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color-primary);
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-primary);
+  font-family: "Ubuntu", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: var(--bg-color-primary);
+}
+
+section {
+  height: 100vh;
+  margin-left: .5rem;
+  margin-right: .5rem;
+
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer-s {
+  position: flex;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    display: grid;
+
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'home sobre'
+    'btn nd'
+    'card card'
+    'footer footer';
+  }
+
+  .home {
+    grid-area: home;
+    width: 50vh;
+    height: 30vh;
+  }
+
+  .sobre {
+    grid-area: sobre;
+    height: 20vh;
+    width: 50vh;
+
+    justify-self: center;
+    align-self: center;
+
+    display: flexbox;
+  }
+
+  .btn {
+    grid-area: btn;
+    width: 50vh;
+  }
+
+  .card {
+    grid-area: card;
+    height: 80vh;
+  }
+
+  .footer-s {
+    grid-area: footer;
+    height: 5vh;
+  }
+}
+
+@media (min-width: 920px) {
+  .app-container {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'home sobre'
+    'card card'
+    'footer footer';
+  }
+
+  .home {
+    grid-area: home;
+    width: 50vh;
+    height: 30vh;
+  }
+
+  .sobre {
+    grid-area: sobre;
+    height: 50vh;
+    width: 60vh;
+
+    justify-self: center;
+    align-self: center;
+  }
+
+  .btn {
+    grid-area: home;
+    height: 80vh;
+    width: 50vh;
+  }
+
+  .card {
+    grid-area: card;
+    height: 100vh;
+  }
+
+  .footer-s {
+    grid-area: footer;
+    height: 5vh;
+  }
+}
